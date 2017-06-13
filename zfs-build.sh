@@ -3,7 +3,7 @@
 set -e
 
 ZFS_VERSION="0.6.5.9"
-export ZFS_VERSION="0.6.5.9"
+export ZFS_VERSION1=$ZFS_VERSION
 ZFS_DIR="zfs-${ZFS_VERSION}"
 SPL_DIR="spl-${ZFS_VERSION}"
 ZFS_TAR="${ZFS_DIR}.tar.gz"
