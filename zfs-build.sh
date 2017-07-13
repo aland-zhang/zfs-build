@@ -13,10 +13,10 @@ ARCH="x86_64"
 KERN_VERSION=`uname -r`
 #KERN_VERSION=3.10.0-327.13.1.el7.x86_64
 
-#if ! rpm -q --quiet kernel-devel-${KERN_VERSION}; then
-#       echo "Package kernel-devel-${KERN_VERSION} not found. Exitting.."
-#       exit 1
-#fi
+if ! rpm -q --quiet kernel-devel-${KERN_VERSION}; then
+       echo "Package kernel-devel-${KERN_VERSION} not found. Exitting.."
+       exit 1
+fi
 
 yum groupinstall -y "Development Tools"
 #yum install -y kernel-devel zlib-devel libuuid-devel libblkid-devel libselinux-devel parted lsscsi wget redhat-lsb ksh libattr-devel libudev-devel
